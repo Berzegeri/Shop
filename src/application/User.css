@@ -1,0 +1,255 @@
+.background{
+    -fx-background-color: rgb(83.0, 170.0, 230.0);
+}
+
+.header{
+    -fx-font-size: 42.0pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: black;
+}
+
+.item-title{
+    -fx-font-size: 11.0pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: black;
+    -fx-opacity: 0.6;
+     
+}
+
+.text-field{
+	-fx-padding: 5.0 22.0 5.0 22.0;   
+    -fx-border-style: null; 
+    -fx-background-radius: 0.0;
+ 	-fx-background-color: rgb(150.0, 200.0, 240.0);
+}
+.vbox{
+	    -fx-background-color: rgb(83.0, 170.0, 230.0);
+}
+.tab {
+	-fx-padding: 5.0 22.0 5.0 22.0;   
+    -fx-border-style: null; 
+    -fx-background-radius: 0.0;
+
+    -fx-background-color: rgb(83.0, 170.0, 230.0);
+  
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11.0pt;
+    -fx-text-fill: black;
+}
+.tab:hover{
+	 -fx-background-color: rgb(150.0, 200.0, 240.0);
+}
+
+.tab:pressed, .tab:default:hover:pressed
+{
+ 	-fx-background-color: rgb(30.0, 130.0, 190.0);
+  	-fx-text-fill: white;
+}
+.tab:focused
+{
+    -fx-border-color: black;
+    -fx-border-width: 1.0;
+    -fx-border-style: segments(1.0, 1.0);
+    -fx-background-insets: 0.0 0.0 0.0 0.0, 0.0, 1.0, 2.0;   
+}
+.tab:disabled, .tab:default:disabled
+{
+    -fx-opacity: 0.4;
+    -fx-background-color: rgb(83.0, 170.0, 230.0);
+    -fx-text-fill: #212121;
+}
+
+.tab:default
+{
+    -fx-background-color: #008287;
+    -fx-text-fill: #ffffff;
+}
+
+.tab:default:hover{
+    -fx-background-color: #219297;
+}
+
+.text-field{
+	-fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11.0pt;
+    -fx-text-fill: black;
+}
+.pane{
+	-fx-border-color: black;
+    -fx-border-width: 1.0;
+    -fx-background-color: rgb(83.0, 170.0, 230.0);
+}
+.button {
+   
+    -fx-background-radius: 0.0;
+
+    -fx-background-color: rgb(83.0, 170.0, 230.0);
+  
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11.0pt;
+    -fx-text-fill: black;
+}
+
+.button:hover{
+    -fx-background-color: rgb(150.0, 200.0, 240.0);
+}
+
+.button:pressed, .button:default:hover:pressed
+{
+  -fx-background-color: rgb(30.0, 130.0, 190.0);
+  -fx-text-fill: white;
+}
+
+.button:focused
+{
+    -fx-border-color: black;
+    -fx-border-width: 1.0;
+    -fx-border-style: segments(1.0, 1.0);
+    -fx-background-insets: 0.0 0.0 0.0 0.0, 0.0, 1.0, 2.0;   
+}
+
+.button:disabled, .button:default:disabled
+{
+    -fx-opacity: 0.4;
+    -fx-background-color: rgb(83.0, 170.0, 230.0);
+    -fx-text-fill: #212121;
+}
+
+.button:default
+{
+    -fx-background-color: #008287;
+    -fx-text-fill: #ffffff;
+}
+
+.button:default:hover{
+    -fx-background-color: #219297;
+}
+/*******************************************************************************
+ *                                                                             *
+ * ScrollBar                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+.scroll-bar .thumb{
+    -fx-background-color: #cdcdcd;
+    -fx-background-insets: 0.0;
+    -fx-background-radius: 0.0;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-color: #dadada;
+}
+
+/* The following is not working. Maybe related to RT-10521*/
+.scroll-bar .thumb:pressed {
+    -fx-background-color: #606060;
+}
+
+
+.scroll-bar .track {
+     -fx-background-color: #f0f0f0;
+    -fx-background-insets: 0.0;
+    -fx-background-radius: 0.0;
+}
+.scroll-bar .track-background {
+     -fx-background-color: #f0f0f0;
+    -fx-background-insets: 0.0;
+}
+
+.scroll-bar .increment-button, .scroll-bar .decrement-button {
+    -fx-background-color: #f0f0f0;
+    -fx-background-insets: 0.0;
+    -fx-background-radius: 0.0;
+    
+    -fx-padding: 0.25em; /* 3 */
+}
+
+.scroll-bar .increment-button:hover, .scroll-bar .decrement-button:hover  {
+    -fx-background-color: #dadada;
+}
+
+.scroll-bar .increment-button:pressed, .scroll-bar .decrement-button:pressed {
+    -fx-background-color: #606060;
+}
+
+.scroll-bar:horizontal .increment-arrow {
+    -fx-background-color: -fx-mark-highlight-color, -fx-mark-color;
+    -fx-background-insets: 1.0 0.0 -1.0 0.0, 0.0;
+    -fx-padding: 0.5em 0.333333em 0.0em 0.0em; /* 6 4 0 0 */
+    -fx-shape: "M7.626,12.876L4.251,8.751H7.14L11,12.876L7.14,17H4.251L7.626,12.876z";
+}
+
+.scroll-bar:vertical .increment-arrow {
+    -fx-background-color: -fx-mark-highlight-color, -fx-mark-color;
+    -fx-background-insets: 1.0 0.0 -1.0 0.0, 0.0;
+    -fx-padding: 0.333333em 0.5em 0.0em 0.0em; /* 4 6 0 0 */
+    -fx-shape: "M8.124,13.625l4.125-3.375v2.889l-4.125,3.86L4,13.139V10.25L8.124,13.625z";
+}
+
+.scroll-bar .increment-button:pressed .increment-arrow {
+    -fx-background-color: white, white;
+}
+
+.scroll-bar:horizontal .decrement-arrow {
+    -fx-background-color: -fx-mark-highlight-color, -fx-mark-color;
+    -fx-background-insets: 1.0 0.0 -1.0 0.0, 0.0;
+    -fx-padding: 0.5em 0.333333em 0.0em 0.0em; /* 6 4 0 0 */
+    -fx-shape: "M11,17H8.111l-3.86-4.124l3.86-4.125H11l-3.375,4.125L11,17z";
+}
+
+.scroll-bar:vertical .decrement-arrow {
+    -fx-background-color: -fx-mark-highlight-color, -fx-mark-color;
+    -fx-background-insets: 1.0 0.0 -1.0 0.0, 0.0;
+    -fx-padding: 0.333333em 0.5em 0.0em 0.0em; /* 4 6 0 0 */
+    -fx-shape: "M4,17v-2.889l4.124-3.86l4.125,3.86V17l-4.125-3.375L4,17z";
+}
+
+.scroll-bar .decrement-button:pressed .decrement-arrow {
+    -fx-background-color: white, white;
+}
+
+.scroll-bar:disabled {
+    -fx-opacity: 0.4;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * ScrollPane                                                                  *
+ *                                                                             *
+ ******************************************************************************/
+
+.scroll-pane {
+    -fx-background-color: transparent,-fx-background;
+}
+
+.scroll-pane .corner {
+    -fx-background-color: white, #f0f0f0;
+}
+
+
+/*******************************************************************************
+ *                                                                             *
+ * ComboBox                                                                    *
+ *                                                                             *
+ ******************************************************************************/
+
+.combo-box-base  {
+    -fx-background-color: transparent, #bababa, transparent, white;
+    -fx-background-radius: 0.0, 0.0, 0.0, 0.0;
+    -fx-padding: 0.166667em; /* 2 */
+}
+
+.combo-box-base:hover {
+    -fx-background-color: transparent, #909090, transparent, white;
+    
+}
+
+/*.combo-box-base:focused {
+    -fx-background-color: -fx-focus-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-radius: 6.4, 4, 5, 3;
+    -fx-background-insets: -1.4, 0, 1, 2;
+}*/
+
+.combo-box-base:disabled {
+    -fx-opacity: 0.4;
+}

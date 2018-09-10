@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0"
+	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.User">
+	<left>
+		<VBox prefHeight="600.0" prefWidth="150.0" BorderPane.alignment="CENTER">
+			<children>
+				<ListView fx:id="catListView" onMouseClicked="#handleSelectCat"
+					prefHeight="200.0" prefWidth="150.0" />
+
+				<VBox prefHeight="100.0" prefWidth="150.0">
+					<children>
+						<TextField fx:id="searchField" alignment="CENTER"
+							minHeight="30" minWidth="100" onKeyReleased="#searchByName"
+							onMouseClicked="#deleteText" text="%keres" />
+					</children>
+				</VBox>
+			</children>
+		</VBox>
+	</left>
+	<center>
+		<TabPane fx:id="Tabs" tabClosingPolicy="UNAVAILABLE"
+			BorderPane.alignment="CENTER">
+			<tabs>
+				<Tab text="%allTab" fx:id="allTab">
+					<content>
+						<StackPane fx:id="stack">
+							<children>
+								<TilePane fx:id="everything" Hgap="20" Vgap="15"
+									depthTest="ENABLE" prefHeight="200.0" prefWidth="200.0">
+									<effect>
+										<InnerShadow />
+									</effect>
+									<opaqueInsets>
+										<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+									</opaqueInsets>
+									<padding>
+										<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+									</padding>
+								</TilePane>
+							</children>
+						</StackPane>
+					</content>
+				</Tab>
+				<Tab fx:id="searchTab" text="%srcTab">
+					<content>
+						<TilePane fx:id="categorized" Hgap="20" Vgap="15"
+							depthTest="ENABLE" prefHeight="200.0" prefWidth="200.0">
+							<effect>
+								<InnerShadow />
+							</effect>
+							<opaqueInsets>
+								<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+							</opaqueInsets>
+							<padding>
+								<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+							</padding>
+						</TilePane>
+					</content>
+				</Tab>
+			</tabs>
+		</TabPane>
+	</center>
+	<top>
+		<VBox maxWidth="35.0" minHeight="55" onMouseClicked="#quit"
+			BorderPane.alignment="TOP_RIGHT">
+			<children>
+				<ImageView fitHeight="60.0" fitWidth="60.0">
+					<image>
+						<Image url="File:min_ex.png">
+						</Image>
+					</image>
+				</ImageView>
+			</children>
+		</VBox>
+	</top>
+	<bottom>
+	</bottom>
+	<right>
+		<VBox alignment="TOP_CENTER">
+			<children>
+				<ImageView fitHeight="180.0" fitWidth="180.0">
+					<image>
+						<Image url="File:shopping_cart.png">
+						</Image>
+					</image>
+				</ImageView>
+				<ScrollPane hbarPolicy="NEVER" prefHeight="300.0"
+					prefWidth="250.0">
+					<content>
+						<GridPane fx:id="cartGrid" Vgap="3">
+							<children>
+							</children>
+						</GridPane>
+					</content>
+				</ScrollPane>
+				<HBox minWidth="250.0" alignment="CENTER">
+					<children>
+						<Label text="%summa">
+							
+						</Label>
+						<Label text="" fx:id="summLab">
+						</Label>
+					</children>
+				</HBox>
+				<Button alignment="CENTER" onMouseClicked="#confirm" text="%confirm" />
+			</children>
+		</VBox>
+	</right>
+</BorderPane>

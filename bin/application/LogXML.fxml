@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.Logger">
+	<top>
+		<Label text="Welcome!" fx:id="greet" textAlignment="CENTER"
+			BorderPane.alignment="CENTER">
+			<font>
+				<Font size="22.0" />
+			</font>
+			<BorderPane.margin>
+				<Insets />
+			</BorderPane.margin>
+			<padding>
+				<Insets top="10.0" />
+			</padding>
+		</Label>
+	</top>
+	<center>
+		<VBox alignment="CENTER">
+			<children>
+				<GridPane alignment="top_center" hgap="20"
+					style="-fx-padding: 40 0 0 0" vgap="15">
+					<children>
+						<Label fx:id="usr" text="User name:" GridPane.columnIndex="0"
+							GridPane.rowIndex="0" />
+
+						<TextField fx:id="usrField" onKeyPressed="#entered"
+							prefColumnCount="10" text="user" GridPane.columnIndex="1"
+							GridPane.rowIndex="0" />
+
+						<Label fx:id="pswd" text="Password:" GridPane.columnIndex="0"
+							GridPane.rowIndex="1" />
+						<PasswordField fx:id="pswdField" onKeyPressed="#entered"
+							prefColumnCount="10" text="user" GridPane.columnIndex="1"
+							GridPane.rowIndex="1" />
+						<Label fx:id="message" text="" GridPane.columnIndex="1"
+							GridPane.rowIndex="2" />
+					</children>
+					<columnConstraints>
+						<ColumnConstraints />
+						<ColumnConstraints />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints />
+						<RowConstraints />
+						<RowConstraints />
+					</rowConstraints>
+				</GridPane>
+				<Button fx:id="btn" alignment="CENTER" contentDisplay="CENTER"
+					onAction="#btnPressed" text="Login" />
+			</children>
+		</VBox>
+	</center>
+	<bottom>
+		<HBox maxWidth="110" spacing="5" BorderPane.alignment="CENTER">
+			<children>
+				<ImageView  fx:id="eng">
+					<image>
+						<Image url="File:photos/en.jpg">
+						</Image>
+					</image>
+				</ImageView>
+				<ImageView fx:id="hun" >
+					<image>
+						<Image url="File:photos/hun.png">
+						</Image>
+					</image>
+				</ImageView>
+			</children>
+		</HBox>
+	</bottom>
+</BorderPane>
